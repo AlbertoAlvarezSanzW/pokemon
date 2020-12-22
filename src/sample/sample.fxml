@@ -6,6 +6,7 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5260a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <columnConstraints>
@@ -21,7 +22,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <GridPane style="-fx-background-color: #7249d2;" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="4">
+      <GridPane fx:id="Principal" prefHeight="296.0" prefWidth="600.0" style="-fx-background-color: #7249d2;" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="4">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -30,11 +31,11 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints />
-            <RowConstraints />
+            <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="25.0" />
+            <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" />
         </rowConstraints>
          <children>
-            <VBox fx:id="poke1" alignment="CENTER" onMouseClicked="#clickOnPoke1" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #62b51c;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <VBox fx:id="poke1" alignment="CENTER" onMouseClicked="#clickOnPoke1" prefHeight="177.0" prefWidth="200.0" style="-fx-background-color: #62b51c;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                     <columnConstraints>
@@ -45,11 +46,11 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="pok1lvl"  alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 9" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label fx:id="pok1name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Bulbasaur" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok1lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok1name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fitHeight="89.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #85c256;">
+                  <ImageView fitHeight="77.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #85c256;">
                      <image>
                         <Image url="@../img/Bulbasaur_XY_variocolor.gif" />
                      </image>
@@ -63,7 +64,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.65" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -73,8 +74,35 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
-               </children></VBox>
-            <VBox alignment="CENTER" layoutX="410.0" layoutY="131.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #9fa0a0;" GridPane.columnIndex="1">
+                  <GridPane prefHeight="16.0" prefWidth="216.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="2.0" prefWidth="101.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="99.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="pok1hp" prefHeight="27.0" prefWidth="98.0" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font></Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="6.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></VBox>
+            <VBox fx:id="poke2" alignment="CENTER" layoutX="410.0" layoutY="131.0" onMouseClicked="#clickOnPoke2" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #9fa0a0;" GridPane.columnIndex="1">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                      <columnConstraints>
@@ -85,8 +113,8 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 73" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Ducktrio" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok2lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok2name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                   <ImageView fitHeight="78.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
@@ -103,7 +131,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.41" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -114,14 +142,38 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
+                  <GridPane layoutX="10.0" layoutY="109.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pok2hp" prefHeight="17.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
                </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </GridPane.margin>
             </VBox>
-            <Label text="Elegir un Pokémon" textFill="#a4d315" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Label text="Elegir un Pokémon" textFill="#f8f6f8" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="48.0" />
                </GridPane.margin></Label>
-            <Button mnemonicParsing="false" text="Siguiente" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+            <Button fx:id="salirButton" disable="true" mnemonicParsing="false" onMouseClicked="#salirButton" text="Salir" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <VBox fx:id="poke3" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke3" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                      <columnConstraints>
@@ -132,11 +184,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 100" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="New" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok3lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok3name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fitHeight="76.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="79.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Mew_NB.gif" />
                      </image>
@@ -150,7 +202,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.18" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -161,9 +213,33 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pok3hp" prefHeight="17.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
                </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #48a0b6;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <VBox fx:id="poke4" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke4" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #48a0b6;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                      <columnConstraints>
@@ -174,11 +250,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 27" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Siiidack" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok4lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok4name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fitHeight="89.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="89.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Psyduck_cristal.gif" />
                      </image>
@@ -192,7 +268,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.93" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -203,9 +279,33 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pok4hp" prefHeight="17.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
                </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke1" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ed452e;">
+            <VBox fx:id="poke5" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke5" prefHeight="133.0" prefWidth="200.0" style="-fx-background-color: #ed452e;">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                      <columnConstraints>
@@ -216,11 +316,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 69" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Charmander" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok5lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok5name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fitHeight="79.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Charmander_NB.gif" />
                      </image>
@@ -234,7 +334,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.31" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -245,9 +345,33 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
+                  <GridPane layoutX="10.0" layoutY="110.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pok5hp" prefHeight="17.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
                </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </GridPane.margin>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #edb92e;" GridPane.columnIndex="2">
+            <VBox fx:id="poke6" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke6" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #edb92e;" GridPane.columnIndex="2">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
                      <columnConstraints>
@@ -258,8 +382,8 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Nv: 1" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Pikachu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok6lvl" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label fx:id="pok6name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                   <ImageView fitHeight="79.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
@@ -276,7 +400,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="0.05" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -287,7 +411,30 @@
                         <Label style="-fx-background-color: black;" text="PS" textFill="#e48c21" GridPane.halignment="RIGHT" />
                      </children>
                   </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pok6hp" prefHeight="17.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font></Label>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../img/macho.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
                </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </GridPane.margin>
             </VBox>
          </children>
       </GridPane>

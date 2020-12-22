@@ -14,6 +14,14 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600  , 400));
         primaryStage.show();
+
+        //Parametros para que la pantalla no se pueda mover
+        primaryStage.setHeight(500);
+        primaryStage.setWidth(650);
+        primaryStage.setMaxHeight(500);
+        primaryStage.setMaxWidth(650);
+        primaryStage.setMinHeight(500);
+        primaryStage.setMinWidth(650);
     }
 
 
