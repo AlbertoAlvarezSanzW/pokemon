@@ -1,14 +1,13 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-
-
 
 
 public class Controller {
@@ -77,6 +76,21 @@ public class Controller {
     @FXML
     public GridPane Principal;
 
+    //creación img
+    @FXML
+    public ImageView img1;
+    @FXML
+    public ImageView img2;
+    @FXML
+    public ImageView img3;
+    @FXML
+    public ImageView img4;
+    @FXML
+    public ImageView img5;
+    @FXML
+    public ImageView img6;
+
+
 
 
 
@@ -88,38 +102,45 @@ public class Controller {
 
 
 //  configurar el Cambio de color         ojo con el ActionEvent...
-    // ojo que los pokemon no estan ordenador... xq soy un desastre
+    // ojo que los pokemon no estan ordenados... xq soy un desastre
     public void initialize(){
-        caracteristicas atributos = new caracteristicas("Bulbasaur","Nv. 17","65/65");
+        caracteristicas atributos = new caracteristicas("Bulbasaur","Nv. 17","65/65", "/img/Bulbasur.gif");
         pok1name.setText(atributos.nombre);
         pok1lvl.setText(atributos.lvl);
         pok1hp.setText(atributos.hp);
+        img1.setImage(new Image(atributos.url));
 
-        caracteristicas atributos1 = new caracteristicas("Ductrio","Nv. 17","65/65");
+
+        caracteristicas atributos1 = new caracteristicas("Ductrio","Nv. 17","65/65", "/img/Dugtrio.gif");
         pok2name.setText(atributos1.nombre);
         pok2lvl.setText(atributos1.lvl);
         pok2hp.setText(atributos1.hp);
+        img2.setImage(new Image(atributos1.url));
 
 
-        caracteristicas atributos2 = new caracteristicas("Mew","Nv. 17","65/65");
+        caracteristicas atributos2 = new caracteristicas("Mew","Nv. 17","65/65", "/img/mew.gif");
         pok3name.setText(atributos2.nombre);
         pok3lvl.setText(atributos2.lvl);
         pok3hp.setText(atributos2.hp);
+        img3.setImage(new Image(atributos2.url));
 
-        caracteristicas atributos3 = new caracteristicas("Psyduck","Nv. 17","65/65");
+        caracteristicas atributos3 = new caracteristicas("Psyduck","Nv. 17","65/65", "img/Psyduck.gif");
         pok4name.setText(atributos3.nombre);
         pok4lvl.setText(atributos3.lvl);
         pok4hp.setText(atributos3.hp);
+        img4.setImage(new Image(atributos3.url));
 
-        caracteristicas atributos4 = new caracteristicas("Charmander","Nv. 17","65/65");
+        caracteristicas atributos4 = new caracteristicas("Charmander","Nv. 17","65/65", "img/Charmander.gif");
         pok5name.setText(atributos4.nombre);
         pok5lvl.setText(atributos4.lvl);
         pok5hp.setText(atributos4.hp);
+        img5.setImage(new Image(atributos4.url));
 
-        caracteristicas atributos5 = new caracteristicas("Pikachu","Nv. 17","65/65");
+        caracteristicas atributos5 = new caracteristicas("Pikachu","Nv. 17","65/65", "img/Pikachu.gif");
         pok6name.setText(atributos5.nombre);
         pok6lvl.setText(atributos5.lvl);
         pok6hp.setText(atributos5.hp);
+        img6.setImage(new Image(atributos5.url));
 
 
     }
