@@ -121,9 +121,9 @@ public class Controller {
     caracteristicas atributos = new caracteristicas("Bulbasaur", "Nv. 17", "/img/Bulbasur.gif", "/img/Bulbasaurespalda.gif", 65, 65, 1.0);
     caracteristicas atributos1 = new caracteristicas("Ductrio", "Nv. 17", "/img/Dugtrio.gif", "/img/Dugtrioespalda.gif", 65, 65, 1.0);
     caracteristicas atributos2 = new caracteristicas("Mew", "Nv. 17", "/img/mew.gif", "/img/Mewespalda.gif", 65, 65, 1.0);
-    caracteristicas atributos3 = new caracteristicas("Psyduck", "Nv. 17", "img/Psyduck.gif", "/img/Psyduckespalda.gif", 65, 65, 1.0);
-    caracteristicas atributos4 = new caracteristicas("Charmander", "Nv. 17", "img/Charmander.gif", "/img/Charmanderespalda.gif", 65, 65, 1.0);
-    caracteristicas atributos5 = new caracteristicas("Pikachu", "Nv. 17", "img/Pikachu.gif", "/img/Pikachuespalda.gif", 65, 65, 1.0);
+    caracteristicas atributos3 = new caracteristicas("Psyduck", "Nv. 17", "/img/Psyduck.gif", "/img/Psyduckespalda.gif", 65, 65, 1.0);
+    caracteristicas atributos4 = new caracteristicas("Charmander", "Nv. 17", "/img/Charmander.gif", "/img/Charmanderespalda.gif", 65, 65, 1.0);
+    caracteristicas atributos5 = new caracteristicas("Pikachu", "Nv. 17", "/img/Pikachu.gif", "/img/Pikachuespalda.gif", 65, 65, 1.0);
 
     //  configurar el Cambio de color         ojo con el ActionEvent...
     // ojo que los pokemon no estan ordenados... xq soy un desastre

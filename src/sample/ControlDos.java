@@ -210,29 +210,31 @@ public class ControlDos {
         if (pokemonrival.vidaActual==0){
             Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
             alerta.setTitle("¡¡¡¡¡¡¡¡ La batalla ha finalizado !!!!!!!");
-            alerta.setContentText("El pokemon rival esta destrozado!,  puede... que vuelva CUIDADO !");
+            alerta.setContentText("El pokemon rival esta destrozado!");
             alerta.setHeaderText("¡ YOU WON !");
+            alerta.setGraphic(new ImageView (this.getClass().getResource(pokemonrival.url).toString()));
             Optional<ButtonType> resultado = alerta.showAndWait();
             if(resultado.isEmpty()){
-                System.out.println("El usuario ha cerrado con la x");
+                System.out.println("Lo ha cerrado");
             }else{
                 if (resultado.get() == ButtonType.OK){
-                    System.out.println("El usuario hadicho si");
+                    System.out.println("¿Continuar?");
 
                 }
             }
         }
         if (aux.vidaActual==0){
-            Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-            alerta.setTitle("Battle Finished");
-            alerta.setContentText("Tu pokemon se ha debilitado, volverás a selección de pokémon y podrás luchar de nuevo, pero no podrás volver a seleccionar este pokemon");
-            alerta.setHeaderText("Has perdido");
-            Optional<ButtonType> resultado = alerta.showAndWait();
+            Alert alerta2 = new Alert(Alert.AlertType.CONFIRMATION);
+            alerta2.setTitle("Battle Finished");
+            alerta2.setContentText("El pokemon te ha reventado... lo mismo es que eres malo con ganas !");
+            alerta2.setHeaderText("You loose...");
+            alerta2.setGraphic(new ImageView (this.getClass().getResource(aux.url).toString()));
+            Optional<ButtonType> resultado = alerta2.showAndWait();
             if(resultado.isEmpty()){
-                System.out.println("El usuario ha cerrado con la x");
+                System.out.println("Lo ha cerrado");
             }else{
                 if (resultado.get() == ButtonType.OK){
-                    System.out.println("El usuario ha dicho si");
+                    System.out.println("¿Continuar?");
 
                 }
             }
