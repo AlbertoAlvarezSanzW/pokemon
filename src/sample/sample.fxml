@@ -64,7 +64,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon1" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -131,7 +131,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon2" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -172,7 +172,6 @@
                <GridPane.margin>
                   <Insets left="48.0" />
                </GridPane.margin></Label>
-            <Button fx:id="salirButton" disable="true" mnemonicParsing="false" onMouseClicked="#salirButton" text="Salir" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <VBox fx:id="poke3" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPoke3" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
                   <GridPane prefHeight="32.0" prefWidth="396.0">
@@ -202,7 +201,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon3" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -254,7 +253,7 @@
                         <Label fx:id="pok4name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fx:id="img4"  fitHeight="89.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img4" fitHeight="89.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Sin_título.png" />
                      </image>
@@ -268,7 +267,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon4" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -320,7 +319,7 @@
                         <Label fx:id="pok5name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fx:id="img5"  fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img5" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Sin_título.png" />
                      </image>
@@ -334,7 +333,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon5" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -386,7 +385,7 @@
                         <Label fx:id="pok6name" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
-                  <ImageView fx:id="img6"  fitHeight="79.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img6" fitHeight="79.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Sin_título.png" />
                      </image>
@@ -400,7 +399,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="barrapokemon6" prefHeight="15.0" prefWidth="183.0" progress="1.0" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
@@ -438,5 +437,6 @@
             </VBox>
          </children>
       </GridPane>
+      <Button fx:id="salirButton" disable="true" mnemonicParsing="false" onMouseClicked="#onButtonAbrirClicked" prefHeight="73.0" prefWidth="256.0" text="Siguiente" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
    </children>
 </GridPane>
