@@ -112,7 +112,19 @@ public class Controller {
     public ImageView img6;
 
     @FXML
+    public Button botonEstadisticas;
+
+    @FXML
     public Button ButtonSiguiente;
+
+
+
+    int contro = 0;
+    int contro1 = 0;
+    int contro2 = 0;
+    int contro3 = 0;
+    int contro4 = 0;
+    int contro5 = 0;
 
     int option = 0;
 
@@ -247,21 +259,27 @@ public class Controller {
             switch (option) {
                 case 1:
                     controller.mandarInfodesdeVenana1(atributos);
+                    contro = contro + 1;
                     break;
                 case 2:
                     controller.mandarInfodesdeVenana1(atributos1);
+                    contro1 = contro1 + 1;
                     break;
                 case 3:
                     controller.mandarInfodesdeVenana1(atributos2);
+                    contro2 = contro2 + 1;
                     break;
                 case 4:
                     controller.mandarInfodesdeVenana1(atributos3);
+                    contro3 = contro3 + 1;
                     break;
                 case 5:
                     controller.mandarInfodesdeVenana1(atributos4);
+                    contro4 = contro4 + 1;
                     break;
                 case 6:
                     controller.mandarInfodesdeVenana1(atributos5);
+                    contro5 = contro5 + 1;
                     break;
                 default:
                     break;
@@ -270,8 +288,6 @@ public class Controller {
             e.printStackTrace();
         }
     }
-
-
 
     public void bajarvida(int vidareducida, double progbar) {
         switch (option) {
@@ -369,6 +385,30 @@ public class Controller {
                 break;
         }
     }
+    @FXML
+    private void botonGraficos(MouseEvent event) {
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ControlDaños.fxml"));
+            GridPane root = (GridPane) loader.load();
+            Scene scene = new Scene(root, 600, 500);
+            stage.setMaxHeight(600);
+            stage.setMaxWidth(600);
+            stage.setMinHeight(500);
+            stage.setMinWidth(500);
+            stage.setScene(scene);
+            stage.show();
+
+            ControlDaño controller3 = loader.getController();
+
+            controller3.controlbarras(this);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

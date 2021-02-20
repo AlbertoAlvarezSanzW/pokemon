@@ -15,6 +15,8 @@ public class ControlDos {
 
     Controller contro;
 
+    ControlDaño controlito;
+
     @FXML
     public ImageView img7;
     @FXML
@@ -84,11 +86,6 @@ public class ControlDos {
         botonesAtaque.setVisible(false);
     }
 
-
-
-
-
-
     public void mandarInfodesdeVenana1(caracteristicas pasarInfo){
 
         barravida.setProgress(pasarInfo.barra);
@@ -97,8 +94,6 @@ public class ControlDos {
         img8.setImage(new Image(pasarInfo.espaldasPokemon));
         controldevidas.setText(pasarInfo.vidaActual+"/"+ pasarInfo.vidaTotal);
         aux=pasarInfo;
-
-
 
     }
     // callback j3j3
@@ -128,6 +123,7 @@ public class ControlDos {
             barrarival.setProgress(0);
         }
         contro.bajarvida(aux.getVidaActual(),barraAuxiliar/100);
+        controlito.dañito(vidaAuxiliar,vidaAuxiliarRival);
         muerto(pokemonRival,aux);
     }
 
@@ -154,6 +150,7 @@ public class ControlDos {
             barrarival.setProgress(1.0);
         }
         contro.bajarvida(aux.getVidaActual(),barraAuxiliar/100);
+        controlito.dañito(vidaAuxiliar,vidaAuxiliarRival);
     }
 
     public void arriesgado(){
@@ -178,6 +175,7 @@ public class ControlDos {
             barrarival.setProgress(0);
         }
         contro.bajarvida(aux.getVidaActual(),barraAuxiliar/100);
+        controlito.dañito(vidaAuxiliar,vidaAuxiliarRival);
         muerto(pokemonRival,aux);
     }
 
@@ -203,6 +201,7 @@ public class ControlDos {
             barrarival.setProgress(0);
         }
         contro.bajarvida(aux.getVidaActual(),barraAuxiliar/100);
+        controlito.dañito(vidaAuxiliar,vidaAuxiliarRival);
         muerto(pokemonRival,aux);
     }
 
@@ -240,6 +239,7 @@ public class ControlDos {
             }
         }
     }
+
 }
 
 
