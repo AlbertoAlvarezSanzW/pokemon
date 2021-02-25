@@ -176,6 +176,7 @@ public class Controller {
 
     @FXML
     // para quitar a los pokeostias la selección
+    // backgrounds por defecto
     public void quitaSeleccion() {
         poke1.setStyle("-fx-background-color: #62b51c;");
         poke2.setStyle("-fx-background-color: #9fa0a0;");
@@ -187,6 +188,9 @@ public class Controller {
 
     }
 
+    // especificamos cada pokemon con un stylo diferente de background para que este cambie al estar seleccionado
+    // vaya cambiando
+    // tenemos que tener presente que es un MouseEvent
     @FXML
     public void clickOnPoke1(MouseEvent event) {
         quitaSeleccion();

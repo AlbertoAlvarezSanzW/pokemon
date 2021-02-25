@@ -11,6 +11,8 @@ public class caracteristicas {
     double barra;
 
     // creamos un constructor a mano.... VIVA EL ECLIPSE
+
+    // este es nuestro constructor de nuestro principal pokemos (Controller 1) <--
     caracteristicas(String nombre, String lvl, String url, String espaldasPokemon, int vidaActual, int vidaTotal, double barra){
         this.nombre=nombre;
         this.lvl = lvl;

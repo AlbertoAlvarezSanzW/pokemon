@@ -1,6 +1,8 @@
 package sample;
 
 
+
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,6 +10,16 @@ import javafx.scene.chart.*;
 
 
 public class ControlDaño {
+
+    /*
+    basicamente la misma cantinella de siempre, especificamos dentro de un grid las siguientes id's
+    BarChart
+    CategoryAxis
+    3NumberAxis
+    PieChart
+
+    que son los graficos de barras que vamos a implementar.
+     */
 
     @FXML
     public BarChart idbarchart;
@@ -20,6 +32,8 @@ public class ControlDaño {
 
     @FXML
     public PieChart idchart;
+
+    // creamos 2 variables estaticas las cuales vamos a jugar con sus valores, dependiendo de la elección
 
     public static int dañorecibido = 0;
 
@@ -49,6 +63,8 @@ public class ControlDaño {
                 new PieChart.Data("DañoSuyo",dañoinfligido)
         );
     }
+
+    // XYChart.Series pokemon1 = new XYChart.Series<>(); esto es para crear una barra de eje X y eje Y
 
     public void controlbarras(Controller controlito1){
         XYChart.Series pokemon1 = new XYChart.Series<>();

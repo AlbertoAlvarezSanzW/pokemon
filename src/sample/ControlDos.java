@@ -22,7 +22,7 @@ public class ControlDos {
     @FXML
     public ImageView img8;
 
-    // definir los nuevos label
+    // definimos los nuevos label con el pokemon rival
     @FXML
     public Label nombrePokemon;
     @FXML
@@ -51,15 +51,16 @@ public class ControlDos {
     public Button seguro;
     @FXML
     public Button curar;
-
+    // controles de vida
     @FXML
     public Label controldevidas;
 
-
+    // controles de ataque
     @FXML
     public GridPane botonesAtaque;
 
-    // vamos a crear 1 auxiliar
+
+    // este auxiliar me lo creo para recibir información desde fuera, porque sino no puedo hacer nada fuera de su función
     caracteristicas aux;
 
 
@@ -73,8 +74,9 @@ public class ControlDos {
         img7.setImage(new Image(pokemonRival.url));
         funcionCancel();
 
-    }
 
+    }
+// CREACIÓN DE LAS FUNCIONES ATACAR Y CANCELAR // ESTOS TIENEN LA OPCIÓN DE PONER VISIBLES LOS BOTONES O NO.
     public void funcionAtacar(){
         botonesAtaque.setDisable(false);
         botonesAtaque.setVisible(true);
@@ -96,7 +98,7 @@ public class ControlDos {
         aux=pasarInfo;
 
     }
-    // callback j3j3
+    // callback <--> IMPORTANTE maldito puto ANCIANO DECREPITO BY JAVI
     public void reenviarinfo(Controller contro){
         this.contro=contro;
     }
@@ -123,6 +125,7 @@ public class ControlDos {
             barrarival.setProgress(0);
         }
         contro.bajarvida(aux.getVidaActual(),barraAuxiliar/100);
+        // esto lo tenemos que implementar aqui para las barras de daño y asi con todos
         controlito.dañito(vidaAuxiliar,vidaAuxiliarRival);
         muerto(pokemonRival,aux);
     }
@@ -207,6 +210,7 @@ public class ControlDos {
 
     public void muerto(caracteristicas pokemonrival, caracteristicas aux) {
         if (pokemonrival.vidaActual==0){
+            // creación de las aletas puto noob de mierda
             Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
             alerta.setTitle("¡¡¡¡¡¡¡¡ La batalla ha finalizado !!!!!!!");
             alerta.setContentText("El pokemon rival esta destrozado!");
